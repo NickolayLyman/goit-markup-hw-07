@@ -12,9 +12,10 @@
 .work-direction-list-item {
     width: calc((100% - 30px*2)/3);
     position: relative;
-}
-.work-direction-list-item:not(:last-child) {
-    margin-right: 30px;
+
+    &:not(:last-child) {
+        margin-right: 30px;   
+    }
 }
 .work-direction-wrapper {
     position: absolute;

@@ -1,12 +1,14 @@
 .footer {
     background-color:#2F303A;
     padding-top: 60px;
-} 
-.footer .container {
+
+    .container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-}
+    }
+} 
+
 .contacts {
     margin-right: 30px;
     width: 270px;
@@ -19,36 +21,37 @@
     font-size: 26px;
     line-height: 1.19;
     color: $secondary-color;
+
+    .logo-footer-item {
+        color: $accent-color;  
+    }
 }
-.logo-footer .logo-footer-item {
-    color: $accent-color;
-}
+
 .contacts-block-list-item:not(:last-child) {
     margin-bottom: 9px;
 }
 .footer-map-link {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    @extend %font-for-address-link;
     color: $secondary-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        font-style: normal;
+        color: $accent-color;
+    }
 }
 .footer-mail-link,
 .footer-tel-link {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    @extend %font-for-address-link;
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-map-link:hover,
-.footer-map-link:focus,
-.footer-mail-link:hover,
-.footer-mail-link:focus,
-.footer-tel-link:hover,
-.footer-tel-link:focus {
-    font-style: normal;
-    color: $accent-color;
+
+    &:hover,
+    &:focus {
+        font-style: normal;
+        color: $accent-color;
+    }
 }
 .footer-list-link {
     display: flex;
@@ -65,7 +68,7 @@
     text-transform: uppercase;
     color: $secondary-color;
 }
-.footer-socail-list-item:not(:last-child){
+.footer-socail-list-item:not(:last-child) {
     margin-right: 10px;
 }
 .footer-social-icon {
@@ -74,24 +77,22 @@
     fill: $secondary-color;
 }
 .footer-social-list-link {
-    display: block; 
-    width: 44px;
-    height: 44px;
-    padding: 12px;
-    border-radius: 50%;
+    @extend %social-links;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+    &:hover,
+    &:focus {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%; 
+        color: $accent-color;
+        background-color: $accent-color;  
+        text-align: center;
+        padding: 12px; 
+    }
+
 } 
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%; 
-    color: $accent-color;
-    background-color: $accent-color;  
-    text-align: center;
-    padding: 12px;
-}
+
 .footer-social-list-link:hover .footer-social-icon,
 .footer-social-list-link:focus .footer-social-icon {
     fill: $secondary-color;
@@ -136,9 +137,7 @@
     padding-left: 16px;
 }
 .contact-form-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %align-center;
     width: 200px;
     height: 50px;
     text-align: center;

@@ -8,12 +8,13 @@
 .work-examples-item {
     width: 370px;
     border: 1px solid #EEEEEE;
-}
-.work-examples-item:not(:nth-child(3n)){
-    margin-right: 30px; 
-}
-.work-examples-item:not(:nth-last-child(-n+3)) {
-    margin-bottom: 30px;
+
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;   
+    }
+    &:not(:nth-last-child(-n+3)) {
+        margin-bottom: 30px;  
+    }
 }
 .work-examples-item:hover { 
     box-shadow: 1px 4px 6px 
@@ -39,7 +40,6 @@
     font-size: 16px;
     line-height: 1.87;
     color: $main-color;
-
 }
 .work-examples-wrapper {
     position: relative;

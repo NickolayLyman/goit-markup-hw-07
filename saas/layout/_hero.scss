@@ -10,9 +10,7 @@
         url(../images/header-bg.jpg);
     background-repeat: no-repeat; 
     background-color: rgb(47, 48, 58);  
-    display: flex; 
-    text-align: center;
-    justify-content: center;
+    @extend %align-center;
     }
 .hero-title {
     margin-bottom: 30px;

@@ -3,18 +3,17 @@
 }
 .advantage-list-item {
     width: calc((100% - 30px*3)/4);
-}
-.advantage-list-item:not(:last-child){
-    margin-right: 30px;
+
+    &:not(:last-child) {
+        margin-right: 30px;  
+    }
 }
 .advantage-list-icon {
     width: 70px;
     height: 70px;
 }
 .advantage-icon-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %align-center;
     padding-top: 25px;
     padding-right: 100px;
     padding-bottom: 25px;
